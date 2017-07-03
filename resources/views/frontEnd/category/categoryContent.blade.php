@@ -226,7 +226,7 @@
                             <h4><a href="{{ url('/product-details/'.$product->id.'/'.$product->productName) }}">{{ $product->productName }}</a></h4>
                             <p>Vel illum qui dolorem.</p>
                             <div class="simpleCart_shelfItem products-right-grid1-add-cart">
-                                <p><i>$325</i> <span class="item_price">TK. {{ $product->productPrice }}</span><a class="item_add" href="{{ url('/add-to-cart/'.$product->id) }}">add to cart </a></p>
+                                <p><i>$325</i> <span class="item_price">TK. {{ $product->productPrice }}</span><a class="item_add" onclick="makeAjaxCart('header-ajax')" href="{{ url('/add-to-cart/'.$product->id) }}">add to cart </a></p>
                             </div>
                         </div>
                     </div>

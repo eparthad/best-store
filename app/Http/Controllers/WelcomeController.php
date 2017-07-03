@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use Session;
+use Cart;
 
 class WelcomeController extends Controller
 {
@@ -29,6 +30,21 @@ class WelcomeController extends Controller
                                     ->where('publicationStatus',1)
                                     ->first();
         return view('frontEnd.product.productContent',['productDetails'=>$productDetails]);
+    }
+
+
+    public function ajaxCartUpdate()
+    {
+        $contents = Cart::content();
+        $total = 0;
+        $num_item = count($contents);
+        foreach($contents as $content){
+            $item_total = $content->price * $content->qty; $total = $total + $item_total;
+        }
+
+        echo 'TK '.$total.' ('.$num_item.' Items)';
+
+//        echo 'hello';
     }
 
 

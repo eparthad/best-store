@@ -35,6 +35,10 @@ Route::post('/add-to-cart/{productId}', 'CartController@add_to_cart');
 Route::get('/add-to-cart/{productId}', 'CartController@add_to_cart');
 Route::post('/update-cart', 'CartController@update_cart');
 Route::get('/delete-to-cart/{rowId}', 'CartController@delete_to_cart');
+
+Route::get('/check-out', 'CartController@checkOut');
+Route::get('/ajax-email-check/{email}', 'CartController@ajaxEmailCheck');
+Route::get('/ajax-cart-update/', 'WelcomeController@ajaxCartUpdate');
 //    Route::post('/product/store', 'ProductController@storeProduct');
 
 /**  End of Cart Route Information **/

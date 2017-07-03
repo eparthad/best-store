@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Customers;
 use Cart;
 use DB;
 
@@ -77,10 +78,37 @@ class CartController extends Controller
         return redirect('/cart/show')->with('message','Item Deleted Successfully.');
     }
 
+    /**
+     * Check Out With Customer Information
+     *
+     *
+     */
+
+    public function checkOut()
+    {
+        return view('frontEnd.cart.checkout');
+    }
 
 
+    /**
+     * Check Email Address Exit Or Not
+     *
+     *
+     */
 
+    public function ajaxEmailCheck($email)
+    {
+        $checkEmail = DB::table('Customers')
+                            ->where('email', $email)
+                            ->first();
+//        var_dump($checkEmail);
 
+        if($checkEmail == NULL){
+            echo "Email Address Is Available";
+        }else{
+            echo $email." already exit.";
+        }
+    }
 
     /**
      * Show the form for creating a new resource.

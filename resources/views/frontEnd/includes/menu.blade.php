@@ -122,22 +122,15 @@
         </script>
         <!-- //search-scripts -->
     </div>
-    <?php
-        $contents = Cart::content();
-        $total = 0;
-        $num_item = count($contents);
-    ?>
-    @foreach($contents as $content)
 
-        <?php $item_total = $content->price * $content->qty; $total = $total + $item_total; ?>
-    @endforeach
 
     <div class="header-right">
         <div class="cart box_1">
             <a href="{{ url('/cart/show') }}">
-                <h3> <div class="total">
-                        TK. {{ $total }} ( {{ $num_item }} Items)
+                <h3> <div class="total" id="header-ajax">
+                        </div>
                     <img src="{{ asset('frontEnd/images/bag.png') }}" alt="" />
+
                 </h3>
             </a>
             <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>

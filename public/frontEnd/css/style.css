@@ -2066,12 +2066,14 @@ label.radio {
 /*-- //single --*/
 /*-- login --*/
 .login-form-grids{
-	width: 45%;
+	width: 90%;
     padding: 3em;
 	background:#F7F7F9;
 	margin:3em auto 0;
 }
-.login-form-grids input[type="email"],.login-form-grids input[type="password"],.login-form-grids input[type="text"]{
+
+
+.login-form-grids input[type="email"],.login-form-grids input[type="password"],.login-form-grids input[type="text"],.login-form-grids textarea, .login-form-grids select{
 	outline: none;
     border: 1px solid #DBDBDB;
     padding: 10px 10px 10px 45px;
@@ -2159,11 +2161,33 @@ label.radio {
 }
 .login-form-grids input[type="text"]{
 	background:url(../images/img-sp.png) no-repeat 5px -259px #fff;
+    margin:1em 0
 }
 .login-form-grids input[type="text"]:nth-child(2){
 	background:url(../images/img-sp.png) no-repeat 0px -298px #fff;
 	margin:1em 0;
 }
+
+.login-form-grids textarea{
+    background:url(../images/address-icon.png) no-repeat 0px 0px #fff;
+}
+
+.login-form-grids input.mobile{
+    background:url(../images/Mobile-Phone-icon.png) no-repeat 0px 5px #fff;
+}
+
+.login-form-grids input.city{
+    background:url(../images/safe-cities-icon.png) no-repeat 0px 5px #fff;
+}
+
+.login-form-grids input.postal{
+    background:url(../images/zip-code.png) no-repeat 0px 5px #fff;
+}
+
+.login-form-grids select.country{
+    background:url(../images/world.png) no-repeat 0px 5px #fff;
+}
+
 .register-check-box label{
 	font-size:14px;
 	font-weight:500;

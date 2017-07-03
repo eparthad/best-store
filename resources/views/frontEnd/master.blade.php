@@ -37,13 +37,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- animation-effect -->
     <link href="{{ asset('frontEnd/css/animate.min.css') }}" rel="stylesheet">
     <script src="{{ asset('frontEnd/js/wow.min.js') }}"></script>
+
+
+    <script src="{{ asset('frontEnd/js/ajaxCartUpdate.js') }}"></script>
     <script>
         new WOW().init();
     </script>
     <!-- //animation-effect -->
 </head>
 
-<body>
+<body onload="makeAjaxCart('header-ajax')">
 <!-- header -->
 <div class="header">
     <div class="container">
