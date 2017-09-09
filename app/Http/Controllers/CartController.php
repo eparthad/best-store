@@ -96,19 +96,7 @@ class CartController extends Controller
      *
      */
 
-    public function ajaxEmailCheck($email)
-    {
-        $checkEmail = DB::table('Customers')
-                            ->where('email', $email)
-                            ->first();
-//        var_dump($checkEmail);
 
-        if($checkEmail == NULL){
-            echo "Email Address Is Available";
-        }else{
-            echo $email." already exit.";
-        }
-    }
 
     /**
      * Show the form for creating a new resource.

@@ -116,7 +116,11 @@
                     @endforeach
                     <li class="total-prize">Total <i>-</i> <span>{{ $total }}</span></li>
                     </ul>
+                    <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
+                        <a href="{{ url('/check-out') }}"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Check Out</a>
+                    </div>
                 </div>
+
                 <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
                     <a href="{{ URL::previous() }}"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
                 </div>

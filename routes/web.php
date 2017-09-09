@@ -37,8 +37,15 @@ Route::post('/update-cart', 'CartController@update_cart');
 Route::get('/delete-to-cart/{rowId}', 'CartController@delete_to_cart');
 
 Route::get('/check-out', 'CartController@checkOut');
-Route::get('/ajax-email-check/{email}', 'CartController@ajaxEmailCheck');
 Route::get('/ajax-cart-update/', 'WelcomeController@ajaxCartUpdate');
+
+
+Route::get('/ajax-email-check/{email}', 'CheckoutController@ajaxEmailCheck');
+Route::get('/ajax-password-check/{pass}/{passAgain}', 'CheckoutController@ajaxPassCheck');
+Route::post('/customer-save','CheckoutController@saveCustomer');
+Route::get('/shipping-address','CheckoutController@shippingAddress');
+Route::post('/save-shipping','CheckoutController@saveShipping');
+Route::get('/payment','CheckoutController@payment');
 //    Route::post('/product/store', 'ProductController@storeProduct');
 
 /**  End of Cart Route Information **/
