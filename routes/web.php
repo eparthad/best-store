@@ -42,10 +42,13 @@ Route::get('/ajax-cart-update/', 'WelcomeController@ajaxCartUpdate');
 
 Route::get('/ajax-email-check/{email}', 'CheckoutController@ajaxEmailCheck');
 Route::get('/ajax-password-check/{pass}/{passAgain}', 'CheckoutController@ajaxPassCheck');
+Route::post('/customer-login','CheckoutController@loginCustomer');
 Route::post('/customer-save','CheckoutController@saveCustomer');
 Route::get('/shipping-address','CheckoutController@shippingAddress');
 Route::post('/save-shipping','CheckoutController@saveShipping');
+Route::post('/place-order','CheckoutController@placeOrder');
 Route::get('/payment','CheckoutController@payment');
+Route::get('/order-successfull','CheckoutController@order_successfull');
 //    Route::post('/product/store', 'ProductController@storeProduct');
 
 /**  End of Cart Route Information **/
@@ -113,6 +116,13 @@ Route::group(['middleware'=>'AuthenticateMiddleware'], function(){
 
 
     /**  End of Product Route Information **/
+
+    /**  Orders Information **/
+    Route::get('/manage-order', 'OrderController@manage_order');
+    Route::get('/view-invoice/{id}', 'OrderController@view_invoice');
+
+
+    /**  End of Order Information **/
 
 
 

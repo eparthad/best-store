@@ -59,6 +59,7 @@
     <div class="register">
         <div class="container">
             <h3 class="animated wow zoomIn" data-wow-delay=".5s">Shipping Here</h3>
+            <h3 class="text-center text-danger">{{ Session::get('message') }}</h3>
             <div class="login-form-grids">
                 <h5 class="animated wow slideInUp" data-wow-delay=".5s">Shipping information</h5>
                 {!! Form::open(['url'=>'/save-shipping', 'method'=>'POST','name'=>'shoppingAddressForm','class'=>'animated wow slideInUp','data-wow-delay'=>'.5s']) !!}

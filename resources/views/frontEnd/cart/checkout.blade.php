@@ -98,14 +98,15 @@
             <h3 class="animated wow zoomIn" data-wow-delay=".5s">Login Form</h3>
             {{--<p class="est animated wow zoomIn" data-wow-delay=".5s"></p>--}}
             <div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-                <form>
-                    <input type="email" placeholder="Email Address" required=" " >
-                    <input type="password" placeholder="Password" required=" " >
+                <spain class="text-center text-danger">{{ Session::get('message') }}</spain>
+                {!! Form::open(['url'=>'/customer-login', 'method'=>'POST']) !!}
+                    <input type="email" name="email" placeholder="Email Address" required=" " >
+                    <input type="password" name="password" placeholder="Password" required=" " >
                     <div class="forgot">
                         <a href="#">Forgot Password?</a>
                     </div>
                     <input type="submit" value="Login">
-                </form>
+                {!! Form::close() !!}
             </div>
         </div>
     </div>

@@ -26,6 +26,9 @@
     <!-- Custom Fonts -->
     <link href="{{ asset('admin/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 
+    <!-- Invoice CSS -->
+    <link href="{{ asset('admin/dist/css/invoice.css') }}" rel="stylesheet" type="text/css">
+
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-use App\Customers;
+use App\Customer;
 use Cart;
+use Session;
 use DB;
 
 class CartController extends Controller
@@ -86,7 +87,14 @@ class CartController extends Controller
 
     public function checkOut()
     {
-        return view('frontEnd.cart.checkout');
+        $customerID = Session::get('lastCustomerId');
+
+        if($customerID){
+            return redirect('/shipping-address');
+        }else if($customerID == NULL){
+            return view('frontEnd.cart.checkout');
+        }
+
     }
 
 
