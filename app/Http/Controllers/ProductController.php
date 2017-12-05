@@ -30,7 +30,7 @@ class ProductController extends Controller
 
         $this->saveProduct($request, $imageUrl);
 
-        return redirect('/product/add')->with('message', 'New Product Created Successfully');
+        return redirect('/product/manage-product')->with('message', 'New Product Created Successfully');
 
 
     }

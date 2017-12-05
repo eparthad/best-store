@@ -15,7 +15,10 @@
                     <p>{{ $order_info->mobile }}</p>
                     <p>{{ $order_info->email }}</p>
                 </address>
-                <span><img alt="" src="http://www.jonathantneal.com/examples/invoice/logo.png"><input type="file" accept="image/*"></span>
+                <span>
+                    {{--<img alt="" src="http://www.jonathantneal.com/examples/invoice/logo.png"><input type="file" accept="image/*">--}}
+                    <h2>Best Store</h2>
+                </span>
             </header>
             <article>
                     <h4>Shipping Information</h4>

@@ -27,7 +27,7 @@ class ManufacturerController extends Controller
         $manufacturer->publicationStatus = $request->publicationStatus;
         $manufacturer->save();
 
-        return redirect('/manufacturer/add')->with('message','Manufacturer Created Successfully.');
+        return redirect('/manufacturer/manage-manufacturer')->with('message','Manufacturer Created Successfully.');
     }
 
     public function manageManufacturer()

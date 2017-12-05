@@ -59,7 +59,7 @@ class CategoryController extends Controller
         ]);
 
 //        return "Category created successfuully";
-        return redirect('/category/add')->with('message', 'Category created successfully.');
+        return redirect('/category/manage-category')->with('message', 'Category created successfully.');
     }
 
 

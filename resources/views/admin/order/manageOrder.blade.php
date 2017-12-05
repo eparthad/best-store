@@ -22,26 +22,26 @@
                     </tr>
                     @foreach($order_info as $order)
                     <tr>
-                        <td>{{$order['order_id']}}</td>
+                        <td>{{$order['id']}}</td>
                         <td>{{ $order['first_name'].' '.$order['last_name'] }}</td>
                         <td>{{ $order['order_total'] }}</td>
                         <td>{{ $order["created_at"] }}</td>
-                        <td>{{ $order['order_status'] }}</td>
-                        {{--<td>--}}
-                             {{--@if( $order->publicationStatus === 1)--}}
-                                {{--published--}}
-                             {{--@elseif( $order->publicationStatus === 0)--}}
-                                {{--Unpublished--}}
-                             {{--@endif--}}
-                        {{--</td>--}}
+                        <td class="@if( $order['order_status'] === 'pending')
+                                bg-danger
+                             @elseif( $order['order_status'] === 'processing')
+                                bg-warning
+                             @elseif( $order['order_status'] === 'delivered')
+                                bg-success
+                             @endif
+                        ">{{ $order['order_status'] }}</td>
                         <td>
-                            <a href="{{ url('/view-invoice/'.$order['order_id']) }}" class="btn btn-info" title="Product Info">
+                            <a href="{{ url('/view-invoice/'.$order['id']) }}" class="btn btn-info" title="Product Info">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                             </a>
-                            <a href="{{ url('/order/'.$order['order_id'].'/edit/') }}" class="btn btn-success" title="Edit">
+                            <a href="{{ url('/order/'.$order['id'].'/edit/') }}" class="btn btn-success" title="Edit">
                                 <span class="glyphicon glyphicon-edit"></span>
                             </a>
-                            <a href="{{ url('/order/'.$order['order_id'].'/delete/') }}" class="btn btn-danger" title="Delete" onclick="return confirm('Are You Sure To Delete This!');">
+                            <a href="{{ url('/order/'.$order['id'].'/delete/') }}" class="btn btn-danger" title="Delete" onclick="return confirm('Are You Sure To Delete This!');">
                                 <span class="glyphicon glyphicon-trash"></span>
                             </a>
                         </td>
@@ -53,3 +53,5 @@
     </div>
 
 @endsection
+
+

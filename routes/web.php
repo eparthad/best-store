@@ -120,6 +120,9 @@ Route::group(['middleware'=>'AuthenticateMiddleware'], function(){
     /**  Orders Information **/
     Route::get('/manage-order', 'OrderController@manage_order');
     Route::get('/view-invoice/{id}', 'OrderController@view_invoice');
+    Route::get('/order/{id}/edit', 'OrderController@editOrder');
+    Route::post('/order/update', 'OrderController@updateOrder');
+    Route::get('/order/{id}/delete', 'OrderController@deleteOrder');
 
 
     /**  End of Order Information **/

@@ -8,7 +8,13 @@
 
             <hr/>
 
-            <h3 class="text-center text-success">{{ Session::get('message') }}</h3>
+            {{--<h3 class="text-center text-success">{{ Session::get('message') }}</h3>--}}
+
+            @if(Session::get('message'))
+                <div class="alert alert-success text-center" role="alert">
+                    <strong>{{ Session::get('message') }}</strong>
+                </div>
+            @endif
 
             <div class="well">
                 <table class="table table-bordered table-hover">
@@ -54,3 +60,11 @@
     </div>
 
 @endsection
+
+<script>
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove();
+        });
+    }, 4000);
+</script>
