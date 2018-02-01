@@ -10,7 +10,7 @@ use Cart;
 class WelcomeController extends Controller
 {
     public function index(){
-        $products = Product::where('publicationStatus',1)->get();
+        $products = Product::where('publicationStatus',1)->take(5)->get();
         return view('frontEnd.home.homeContent',['products'=>$products]);
     }
 

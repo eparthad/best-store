@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
+use App\Category;
+use App\Order;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home.homeContent');
+        $category = count(Category::where('publicationStatus',1)->get());
+        $product = count(Product::where('publicationStatus',1)->get());
+        $orderPending = count(Order::where('order_status','pending')->get());
+        $orderDeliver = count(Order::where('order_status','delivered')->get());
+        $orderProcessing = count(Order::where('order_status','processing')->get());
+        return view('admin.home.homeContent',['category'=>$category,'product'=>$product,'orderPending'=>$orderPending,'orderProcessing'=>$orderProcessing,'orderDeliver'=>$orderDeliver]);
     }
 }

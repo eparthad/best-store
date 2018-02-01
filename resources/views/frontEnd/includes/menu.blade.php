@@ -20,46 +20,46 @@
                     <li class="active"><a href="{{url('/category-view/'.$publishCategory->id.'/'.$publishCategory->categoryName)}}" class="act">{{ $publishCategory->categoryName }}</a></li>
                     @endforeach
                     <!-- Mega Menu -->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-column columns-3">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <ul class="multi-column-dropdown">
-                                        <h6>Men's Wear</h6>
-                                        <li><a href="{{url('/category')}}">Clothing</a></li>
-                                        <li><a href="products.html">Wallets</a></li>
-                                        <li><a href="products.html">Shoes</a></li>
-                                        <li><a href="products.html">Watches</a></li>
-                                        <li><a href="products.html">Accessories</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-4">
-                                    <ul class="multi-column-dropdown">
-                                        <h6>Women's Wear</h6>
-                                        <li><a href="products.html">Clothing</a></li>
-                                        <li><a href="products.html">Wallets,Bags</a></li>
-                                        <li><a href="products.html">Footwear</a></li>
-                                        <li><a href="products.html">Watches</a></li>
-                                        <li><a href="products.html">Accessories</a></li>
-                                        <li><a href="products.html">Jewellery</a></li>
-                                        <li><a href="products.html">Beauty & Grooming</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-4">
-                                    <ul class="multi-column-dropdown">
-                                        <h6>Kid's Wear</h6>
-                                        <li><a href="products.html">Kids Home Fashion</a></li>
-                                        <li><a href="products.html">Boy's Clothing</a></li>
-                                        <li><a href="products.html">Girl's Clothing</a></li>
-                                        <li><a href="products.html">Shoes</a></li>
-                                        <li><a href="products.html">Brand Stores</a></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </ul>
-                    </li>
+                    {{--<li class="dropdown">--}}
+                        {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>--}}
+                        {{--<ul class="dropdown-menu multi-column columns-3">--}}
+                            {{--<div class="row">--}}
+                                {{--<div class="col-sm-4">--}}
+                                    {{--<ul class="multi-column-dropdown">--}}
+                                        {{--<h6>Men's Wear</h6>--}}
+                                        {{--<li><a href="{{url('/category')}}">Clothing</a></li>--}}
+                                        {{--<li><a href="products.html">Wallets</a></li>--}}
+                                        {{--<li><a href="products.html">Shoes</a></li>--}}
+                                        {{--<li><a href="products.html">Watches</a></li>--}}
+                                        {{--<li><a href="products.html">Accessories</a></li>--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-sm-4">--}}
+                                    {{--<ul class="multi-column-dropdown">--}}
+                                        {{--<h6>Women's Wear</h6>--}}
+                                        {{--<li><a href="products.html">Clothing</a></li>--}}
+                                        {{--<li><a href="products.html">Wallets,Bags</a></li>--}}
+                                        {{--<li><a href="products.html">Footwear</a></li>--}}
+                                        {{--<li><a href="products.html">Watches</a></li>--}}
+                                        {{--<li><a href="products.html">Accessories</a></li>--}}
+                                        {{--<li><a href="products.html">Jewellery</a></li>--}}
+                                        {{--<li><a href="products.html">Beauty & Grooming</a></li>--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-sm-4">--}}
+                                    {{--<ul class="multi-column-dropdown">--}}
+                                        {{--<h6>Kid's Wear</h6>--}}
+                                        {{--<li><a href="products.html">Kids Home Fashion</a></li>--}}
+                                        {{--<li><a href="products.html">Boy's Clothing</a></li>--}}
+                                        {{--<li><a href="products.html">Girl's Clothing</a></li>--}}
+                                        {{--<li><a href="products.html">Shoes</a></li>--}}
+                                        {{--<li><a href="products.html">Brand Stores</a></li>--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                                {{--<div class="clearfix"></div>--}}
+                            {{--</div>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
                     {{--<li class="dropdown">--}}
                         {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Furniture <b class="caret"></b></a>--}}
                         {{--<ul class="dropdown-menu multi-column columns-3">--}}
@@ -133,7 +133,7 @@
 
                 </h3>
             </a>
-            <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+            <p><a href="{{ url('/empty-cart') }}" class="simpleCart_empty">Empty Cart</a></p>
             <div class="clearfix"> </div>
         </div>
     </div>

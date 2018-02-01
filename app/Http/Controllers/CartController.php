@@ -97,6 +97,12 @@ class CartController extends Controller
 
     }
 
+    public function empty_cart()
+    {
+        Cart::destroy();
+        return redirect('/');
+    }
+
 
     /**
      * Check Email Address Exit Or Not

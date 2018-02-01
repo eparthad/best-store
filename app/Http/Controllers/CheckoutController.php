@@ -199,4 +199,11 @@ class CheckoutController extends Controller
         return view('frontEnd.cart.successfull');
     }
 
+
+    public function logout(){
+        Session::forget('lastCustomerId');
+
+        return redirect::to('/');
+    }
+
 }

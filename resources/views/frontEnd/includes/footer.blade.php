@@ -1,3 +1,8 @@
+<script>
+
+</script>
+
+
 <div class="footer">
     <div class="container">
         <div class="footer-grids">

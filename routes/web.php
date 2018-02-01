@@ -35,6 +35,7 @@ Route::post('/add-to-cart/{productId}', 'CartController@add_to_cart');
 Route::get('/add-to-cart/{productId}', 'CartController@add_to_cart');
 Route::post('/update-cart', 'CartController@update_cart');
 Route::get('/delete-to-cart/{rowId}', 'CartController@delete_to_cart');
+Route::get('/empty-cart', 'CartController@empty_cart');
 
 Route::get('/check-out', 'CartController@checkOut');
 Route::get('/ajax-cart-update/', 'WelcomeController@ajaxCartUpdate');
@@ -49,6 +50,7 @@ Route::post('/save-shipping','CheckoutController@saveShipping');
 Route::post('/place-order','CheckoutController@placeOrder');
 Route::get('/payment','CheckoutController@payment');
 Route::get('/order-successfull','CheckoutController@order_successfull');
+Route::get('/log-out','CheckoutController@logout');
 //    Route::post('/product/store', 'ProductController@storeProduct');
 
 /**  End of Cart Route Information **/

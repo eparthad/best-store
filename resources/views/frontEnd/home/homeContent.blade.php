@@ -121,7 +121,9 @@
                         <h4><a href="{{ url('/product-details/'.$product->id.'/'.$product->productName) }}">{{ $product->productName }}</a></h4>
                         <p>Vel illum qui dolorem eum fugiat.</p>
                         <div class="new-collections-grid1-left simpleCart_shelfItem">
-                            <p><i>$325</i> <span class="item_price">{{ $product->productPrice }}</span><a class="item_add" href="{{ url('/add-to-cart/'.$product->id) }}">add to cart </a></p>
+                            <p>
+                                {{--<i>$325</i>--}}
+                                <span class="item_price">TK. {{ $product->productPrice }}</span><a class="item_add" href="{{ url('/add-to-cart/'.$product->id) }}">add to cart </a></p>
                         </div>
                     </div>
                 </div>
